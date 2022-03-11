@@ -1,0 +1,14 @@
+###
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+  "input_name": "gloves",
+  "input_price": 35,
+  "input_image_url": "https://cdn.shopify.com/s/files/1/1249/3023/products/FineTOUGHOKGloveIndigoWhite.png?v=1637343200",
+  "input_description": "hand shoes"
+}
+
