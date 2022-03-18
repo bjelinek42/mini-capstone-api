@@ -16,9 +16,10 @@ class SupplierController < ApplicationController
 
   def update
     supplier = Supplier.find_by(id: params[:id])
-
-
-    
+    supplier.name = params[:name]
+    supplier.phone_number = params[:phone_number]
+    supplier.email = params[:email]
+    supplier.save
   end
 
   def destroy
