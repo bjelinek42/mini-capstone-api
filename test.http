@@ -16,12 +16,11 @@ content-type: application/json
 }
 
 ###
-PATCH http://localhost:3000/products/6.json
+PATCH http://localhost:3000/products/3.json
 content-type: application/json
 
 {
-  "input_name": "shirt",
-  "input_price": "50"
+  "input_supplier_id": 2
 }
 
 ###
