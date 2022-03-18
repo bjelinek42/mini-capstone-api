@@ -23,3 +23,6 @@ content-type: application/json
   "input_name": "shirt",
   "input_price": "50"
 }
+
+###
+DELETE http://localhost:3000/products/8
