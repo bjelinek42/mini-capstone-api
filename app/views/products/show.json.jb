@@ -6,5 +6,6 @@
   name: @product.name,
   description: @product.description,
   total: @product.total,
-  supplier: @product.supplier
+  supplier: @product.supplier,
+  images: @product.images
 }
