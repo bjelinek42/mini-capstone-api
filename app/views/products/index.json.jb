@@ -8,6 +8,7 @@
     price: product.price, 
     name: product.name, 
     description: product.description, 
-    total: product.total
+    total: product.total,
+    supplier: product.supplier
   }
 end

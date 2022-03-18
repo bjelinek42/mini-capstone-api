@@ -13,4 +13,14 @@ Rails.application.routes.draw do
   patch "/products/:id" => "products#update"
 
   delete "/products/:id" => "products#destroy"
+
+  get "/supplier" => "supplier#index"
+
+  get "/supplier/:id" => "supplier#show"
+
+  post "/supplier" => "supplier#create"
+
+  patch "/supplier/:id" => "supplier#update"
+
+  delete "/supplier/:id" => "supplier#destroy"
 end
