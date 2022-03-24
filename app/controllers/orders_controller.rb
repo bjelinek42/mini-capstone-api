@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user, only: [:create]
 
   def show
     order = Order.find_by(id: params[:id])
@@ -20,7 +21,7 @@ class OrdersController < ApplicationController
 
 
   def create
-    product = Product.find(id: params[:product_id])
+    product = Product.find_by(id: params[:product_id])
     order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],

@@ -25,7 +25,8 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:3000/products/8
+DELETE http://localhost:3000/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDIyODN9.X2IT-ioktFqA1URmOZ1mlbpite270XYmcc8Xwf9o-FQ
 
 ###
 GET http://localhost:3000/suppliers.json
@@ -47,8 +48,8 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Ben",
+  "email": "ben@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -58,17 +59,18 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "ben@test.com",
   "password": "password"
 }
 
 ###
 POST http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDIyODN9.X2IT-ioktFqA1URmOZ1mlbpite270XYmcc8Xwf9o-FQ
 content-type: application/json
 
 {
   "user_id": 1,
-  "product_id": 1,
+  "product_id": 2,
   "quantity": 2
 }
 

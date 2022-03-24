@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def show
     @product = Product.find_by(id: params[:id])
