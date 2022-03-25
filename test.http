@@ -59,7 +59,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ben@test.com",
+  "email": "test@test.com",
   "password": "password"
 }
 
@@ -95,4 +95,4 @@ content-type: Application/json
 
 ###
 GET http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjI4OTF9.ReQDP3_2apeSy60kfoyzjSxmj4KxIC9l2Xo4kB-CQEY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgzMzI5OTR9.dHbJ5MmUiLx36T264r-TGkpsdct6vCQ79BnakJeCZ-w
