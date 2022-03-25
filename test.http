@@ -82,3 +82,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTYyN
 ###
 GET http://localhost:3000/orders
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTYyNTZ9.jwmHooN5WI3FLW8Q_cnO1cRxdoaTh7zVbXydFCHGxfA
+
+###
+POST http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgzMjIwNjl9.LstTJeS97Zh08nDlJOg71bto78cD1dUe-tTKsIiMjJo
+content-type: Application/json
+
+{
+  "product_id": 9,
+  "quantity": 2
+}
+
+###
+GET http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjI4OTF9.ReQDP3_2apeSy60kfoyzjSxmj4KxIC9l2Xo4kB-CQEY
