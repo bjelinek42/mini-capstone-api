@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk4NzE0ODh9.lnPL_oIjJJnY7Wq6DGKqVXcNKvLYQdK3tiabSp7U4x4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk4NzU0NzR9._avBQ4LmBV_5PsdsnvdwNC225Y1HhRdYXRUrRMO9UJ4
 
 ###
 GET http://localhost:3000/products.json
@@ -10,13 +10,14 @@ Authorization: Bearer jwt
 
 ###
 POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk4NzU0NzR9._avBQ4LmBV_5PsdsnvdwNC225Y1HhRdYXRUrRMO9UJ4
 content-type: application/json
 
 {
-  "input_name": "cake",
+  "input_name": "Hat",
   "input_price": 23,
-  "input_image_url": "https://cdn.shopify.com/s/files/1/1249/3023/products/FineTOUGHOKGloveIndigoWhite.png?v=1637343200",
-  "input_description": "fattening delicious cake"
+  "input_description": "fattening delicious cake",
+  "input_supplier_id": 2
 }
 
 ###

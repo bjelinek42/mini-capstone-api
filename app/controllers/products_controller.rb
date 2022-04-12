@@ -15,7 +15,8 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params[:input_name],
       price: params[:input_price],
-      description: params[:input_description])
+      description: params[:input_description],
+      supplier_id: params[:input_supplier_id])
     if @product.save
       render template: "products/show"
     else

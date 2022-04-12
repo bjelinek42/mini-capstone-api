@@ -24,8 +24,7 @@ export default {
 <template>
   <div class="home">
     <div v-for="product in products" v-bind:key="product.id">
-      <p>{{ product.name }}</p>
-      <p>{{ product.description }}</p>
+      <p>{{ product.name }} - {{ product.description }}</p>
     </div>
     <h1>{{ message }}</h1>
   </div>
