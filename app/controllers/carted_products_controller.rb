@@ -11,11 +11,17 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: "removed",
+      status: "carted",
       order_id: nil
     )
     cart.save
     render json: cart
   end
 
+  def destroy
+    cp = CartedProduct.find(params[:id])
+    cp.status = "removed"
+    cp.save
+    render json: {message: "removed from shopping cart"}
+  end
 end

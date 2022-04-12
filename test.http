@@ -1,9 +1,12 @@
-###
-GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5NzMxMTJ9.Zr-G1p0HH8QQKCnBrwbo4QmgmYjmNWe_63rkcCzawCk
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk4NzE0ODh9.lnPL_oIjJJnY7Wq6DGKqVXcNKvLYQdK3tiabSp7U4x4
 
 ###
-GET http://localhost:3000/products/1.json
+GET http://localhost:3000/products.json
+Authorization: Bearer jwt
+
+###
+GET http://localhost:3000/products/2.json
+Authorization: Bearer jwt
 
 ###
 POST http://localhost:3000/products.json
@@ -26,7 +29,7 @@ content-type: application/json
 
 ###
 DELETE http://localhost:3000/products/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDIyODN9.X2IT-ioktFqA1URmOZ1mlbpite270XYmcc8Xwf9o-FQ
+Authorization: Bearer jwt
 
 ###
 GET http://localhost:3000/suppliers.json
@@ -59,33 +62,27 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "ben@test.com",
   "password": "password"
 }
 
 ###
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDIyODN9.X2IT-ioktFqA1URmOZ1mlbpite270XYmcc8Xwf9o-FQ
-content-type: application/json
+Authorization: Bearer jwt
 
-{
-  "user_id": 1,
-  "product_id": 2,
-  "quantity": 2
-}
 
 ###
-GET http://localhost:3000/orders/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTYyNTZ9.jwmHooN5WI3FLW8Q_cnO1cRxdoaTh7zVbXydFCHGxfA
+GET http://localhost:3000/orders/16
+Authorization: Bearer jwt
 
 
 ###
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTYyNTZ9.jwmHooN5WI3FLW8Q_cnO1cRxdoaTh7zVbXydFCHGxfA
+Authorization: Bearer jwt
 
 ###
 POST http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgzMjIwNjl9.LstTJeS97Zh08nDlJOg71bto78cD1dUe-tTKsIiMjJo
+Authorization: Bearer jwt
 content-type: Application/json
 
 {
@@ -95,4 +92,8 @@ content-type: Application/json
 
 ###
 GET http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgzMzI5OTR9.dHbJ5MmUiLx36T264r-TGkpsdct6vCQ79BnakJeCZ-w
+Authorization: Bearer jwt
+
+###
+DELETE http://localhost:3000/carted_products/15
+Authorization: Bearer jwt

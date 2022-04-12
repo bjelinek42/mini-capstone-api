@@ -21,16 +21,37 @@ class OrdersController < ApplicationController
 
 
   def create
-    product = Product.find_by(id: params[:product_id])
+    cp = CartedProduct.where(user_id: current_user.id)
+    carteds = []
+    cp.each do |product|
+      if product.status == "carted"
+        carteds << product
+      end
+    end
+    # cp = CartedProduct.where(user_id: current_user.id, status: "carted")
+    # render json: carted
+    subtotals = []
+    carteds.each do |carted|
+      product = Product.find(carted.product_id)
+      price = product.price
+      subtotal = price * carted.quantity
+      subtotals << subtotal
+    end
+    subtotal = subtotals.sum
+    tax = subtotal * 0.09
+    total = subtotal + tax
     order = Order.new(
       user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:quantity],
-      subtotal: product.price * params[:quantity],
-      tax: product.tax * params[:quantity],
-      total: product.total * params[:quantity]
+      subtotal: subtotal,
+      tax: tax,
+      total: total
     )
     order.save!
+    carteds.each do |carted|
+      carted.status = "purchased"
+      carted.order_id = order.id
+      carted.save
+    end
     render json: order.as_json
   end
 

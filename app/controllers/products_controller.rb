@@ -8,9 +8,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    pp "***************"
-    pp current_user
-    pp "*****************"
     render template: "products/index"
   end
 
