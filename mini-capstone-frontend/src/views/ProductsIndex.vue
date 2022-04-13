@@ -25,7 +25,7 @@ export default {
   <div class="home">
     <div v-for="product in products" v-bind:key="product.id">
       <p>{{ product.name }} - {{ product.description }}</p>
-      <router-link v-bind:to="`/products/${product.id}`"></router-link>
+      <router-link v-bind:to="`/products/${product.id}`">More Details</router-link>
     </div>
     <h1>{{ message }}</h1>
   </div>
