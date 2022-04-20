@@ -21,10 +21,10 @@ Product.create!([
   {name: "sweatshirt", price: "35.0", description: "makes torso sweaty", inventory: nil, supplier_id: 2}
 ])
 Image.create!([
-  {url: "https://images.squarespace-cdn.com/content/v1/5eb2f5532d212a0e2b3f2102/1600972148147-KKI2J85MHO7WLFD8YOF9/Per+Location_Pizza+Slice+Cheese+Pull.jpg?format=1500w", product_id: product.first.id},
-  {url: "https://3dur7j6ifxs3y5qo2e7mraga-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/Leon-Gessi-2.jpg", product_id: product.first.id},
-  {url: "https://3dur7j6ifxs3y5qo2e7mraga-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/Rufranos-1.jpg", product_id: product.first.id},
-  {url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bestsweatshirtswomen-1619798167.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*", product_id: product.first.id}
+  {url: "https://images.squarespace-cdn.com/content/v1/5eb2f5532d212a0e2b3f2102/1600972148147-KKI2J85MHO7WLFD8YOF9/Per+Location_Pizza+Slice+Cheese+Pull.jpg?format=1500w", product_id: 1},
+  {url: "https://3dur7j6ifxs3y5qo2e7mraga-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/Leon-Gessi-2.jpg", product_id: 1},
+  {url: "https://3dur7j6ifxs3y5qo2e7mraga-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/Rufranos-1.jpg", product_id: 1},
+  {url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bestsweatshirtswomen-1619798167.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*", product_id: 1}
 ])
 Category.create!([
   {name: "food"},
