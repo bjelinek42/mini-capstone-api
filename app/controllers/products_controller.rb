@@ -26,10 +26,10 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find_by(id: params[:id])
-    @product.name = params[:input_name] || @product.name
-    @product.price = params[:input_price] || @product.price
-    @product.description = params[:input_description] || @product.description
-    @product.supplier_id = params[:input_supplier_id] || @product.supplier_id
+    @product.name = params[:name] || @product.name
+    @product.price = params[:price] || @product.price
+    @product.description = params[:description] || @product.description
+    @product.supplier_id = params[:supplier_id] || @product.supplier_id
     if @product.save
       render template: "products/show"
     else
